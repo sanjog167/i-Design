@@ -886,51 +886,7 @@
                     scrollPosition = window.pageYOffset;
                     scrollDistance += scrollDelta;
 
-                    if (window.pageYOffset > positionWhenToStick()) {
-                        if (!stuck) {
-                            nav.addClass('nav-panel--stuck');
-                            nav.css('transitionDuration', '0s');
-
-                            if (mode === 'alwaysOnTop') {
-                                show();
-                            }
-
-                            nav.height(); // force reflow
-                            nav.css('transitionDuration', '');
-                            stuck = true;
-
-                            if (departments && departmentsMode === 'fixed') {
-                                departments.setMode('normal');
-                            }
-
-                            closeAllSubmenus();
-                        }
-
-                        if (mode === 'pullToShow') {
-                            const distanceToShow = 10; // in pixels
-                            const distanceToHide = 25; // in pixels
-
-                            if (scrollDistance < -distanceToShow && !nav.hasClass('nav-panel--show')) {
-                                show();
-                            }
-                            if (scrollDistance > distanceToHide && nav.hasClass('nav-panel--show')) {
-                                hide();
-                                closeAllSubmenus();
-                            }
-                        }
-                    } else if (window.pageYOffset <= positionWhenToFix()) {
-                        if (stuck) {
-                            nav.removeClass('nav-panel--stuck');
-                            stuck = false;
-                            hide();
-
-                            if (departments && departmentsMode === 'fixed') {
-                                departments.setMode('fixed');
-                            }
-
-                            closeAllSubmenus();
-                        }
-                    }
+            
                 };
 
                 const onMediaChange = function() {
