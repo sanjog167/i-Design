@@ -4748,11 +4748,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
   display: none;
 }
 
+.showmenus{
+  display: block !important;
+}
+
 .nav-panel--stuck .stickcategory{
   display: block;
 }
 
-.nav-panel--stuck .departments__links, .nav-panel--stuck .nav-panel__departments, .nav-panel--stuck  .departments__submenus-container{
+.nav-panel--stuck .departments__links, .nav-panel__departments .nav-panel--stuck  .departments__submenus-container{
   display: none;
 }
 

@@ -1542,41 +1542,7 @@
                 <div class="nav-panel__nav-links nav-links">
                   <ul class="nav-links__list">
 
-                    <li class="nav-links__item nav-links__item--has-submenu stickcategory">
-                      <a class="nav-links__item-link" href="index.html">
-                        <div class="nav-links__item-body">
-                          Flex
-                         
-                        </div>
-                      </a>
-                    </li>
-
-                    <li class="nav-links__item nav-links__item--has-submenu stickcategory">
-                      <a class="nav-links__item-link" href="index.html">
-                        <div class="nav-links__item-body">
-                          Events
-                         
-                        </div>
-                      </a>
-                    </li>
-
-                    <li class="nav-links__item nav-links__item--has-submenu stickcategory">
-                      <a class="nav-links__item-link" href="index.html">
-                        <div class="nav-links__item-body">
-                          Digital Print
-                         
-                        </div>
-                      </a>
-                    </li>
-
-                    <li class="nav-links__item nav-links__item--has-submenu stickcategory">
-                      <a class="nav-links__item-link" href="index.html">
-                        <div class="nav-links__item-body">
-                          Apparels
-                         
-                        </div>
-                      </a>
-                    </li>
+                   
 
                     <li class="nav-links__item nav-links__item--has-submenu">
                       <a class="nav-links__item-link" href="index.html">
@@ -3493,7 +3459,14 @@
       $('.nav-panel').addClass('nav-panel--stuck');
     } else {
       $('.nav-panel').removeClass('nav-panel--stuck');
+      $(".departments__links").removeClass('showmenus');
     }
+  })
+</script>
+
+<script>
+  $(" .departments--open").click(function(){
+    $(".departments__links").toggleClass('showmenus');
   })
 </script>
 
